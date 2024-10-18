@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Code and Key Value</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 55px;
+        }
+        p {
+            font-size: 18px;
+        }
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Press any key to display its code and value</h1>
+    <p>Key Code: <span id="keyCode">---</span></p>
+    <p>Key Value: <span id="keyValue">---</span></p>
+
+    <script>
+        document.addEventListener("keydown", function(event) {
+            document.getElementById("keyCode").textContent = event.keyCode;
+            document.getElementById("keyValue").textContent = event.key;
+        });
+    </script>
+
+</body>
+</html>
